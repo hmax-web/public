@@ -52,7 +52,7 @@
     - Indicador de existência de hospedagens anteriores (visível quando houver alguma)
     - Possibilidade de visualizar lista de hospedagens anteriores
   - **Veículos** da Reserva
-    - Planca, Descrição e Cor
+    - Placa, Descrição e Cor
   - **Hóspedes** com possibilidade de criança ou consulta da cadastros
   - **Múltiplos tarifários** para seleção
   - **Conta da reserva**
@@ -334,7 +334,14 @@
   - Listagem de assinatura
   - Listagem de pagamentos de assinatura
 - **Reservas Online**
-  - Sincronia de reservas com o serviços de reservas online
+  - Sincronia de reservas com o serviços de reservas online que preveem integrações com:
+    - Omnibees
+    - HSystem
+    - Bukly
+    - B2B
+    - Foco Multimídia
+    - PmWeb  
+    - Motor de Reservas HMAX 
   - Consequentemente também recebe Reservas do HMAX AI
 - **Web Check-in**
   - Email/Whatsapp de Web check-in
