@@ -70,15 +70,19 @@
   - **Pagamentos da Reserva**
     - Lista de pagamentos da reserva
     - Inclusão de pagamento nas formas Dinheiro, Cheque, Cartão, Depósito Bancário, PIX (apenas no Brasil)
-        - **Formas de pagamento** suportadas: **PIX**, **Cartão de Crédito/Débito**, **Dinheiro**, **Depósito bancário**, **Cheque** e **Cobrança A Prazo** (esta última tem caminho específico)
-    - Cancelamento de pagamento
+        - **Formas de pagamento** suportadas: **PIX**, **Cartão de Crédito/Débito**, **Dinheiro**, **Depósito bancário**, **Cheque** , **Cobrança A Prazo** (em botão específico para isto) e **Crédito Pessoal ou Uso de crédito**
+    - Estorno de pagamento
     - **Cobrança A Prazo (faturamento para pessoa autorizada)**
       - Possibilidade de definir uma pessoa para cobrança a prazo para valores de Hospedagem, Extras ou alcoólicos.
           - Se houver Financeiro irá gerar um título a Receber, senão, deve gerar um pagamento na lista de pagamentos, com status "não pago"
       - Depende ter Financeiro ativo e haver prazo definido no cadastro da pessoa
     - **Comprovante de pagamento**: Versão para impressão do comprovante de pagamento
     - Enviar **link de pagamento** (PIX/cartão): Depende de integração configurada
+    - Permitir definir se um pagamento será cobrado das despesas À Vista ou A Prazo.
   - **Log de atividades da Reserva**
+  - **No-Show**
+    - Possibilidade de definir uma reserva como No-Show (não compareceu), podendo gerar pagamento a prazo e conta a receber (se tiver financeiro), ou ainda, se houver valor a devolver para o hóspede, permite gerar crédito pessoal ou conta a pagar.
+    - O menu "No-Show" está disponível na reserva e na lista de reservas através do menu, mas só aparece a partir da data de entrada da reserva
 - **Ações Dento do Detalhe da Reserva**
   - Check-in
   - Check-out
@@ -89,6 +93,7 @@
     - Listagem de pagamentos com inclusão e cancelamento durante o fechamento de conta
     - Saldo de conta com moedas estrangeiras
       - Depende de configuração e cotação para as moedas
+    - Geração de **Crédito pessoal** em fechamentos de conta com saldo credor
   - Cadastro de **Limpeza**/Governança
   - **Interdição de acomodação**
 - **Lançamento automático de diárias**
@@ -96,7 +101,6 @@
   - Permite reservar, interditar, transferir de acomodação ou perído, estender ou encurdar estadia, podendo arrastar a reserva para um período fora dos limites exibidos devido ao auto-scroll, desde que dentro do período selecionado.
 - **Mapa de reservas por Tipo de acomodação**
   - Envio de disponbilidade para Reservas Online. Depende de ter integração
-
 ---
 
 ## Movimento de Caixa
@@ -134,12 +138,13 @@
   - Filtros: Período, Ponto de Venda, Usuário e Tipo (Produto/Serviço)
   - Totalização por ponto de venda
 - **Estornos**
-  - Listagem de estornos
+  - Listagem de estornos de consumos e pagamentos
   - Vizualização do motivo do estorno
   - Permite arquivar estornos já esclarecidos
+  - Filtros de estornos de consumos e estornos de pagamento
 - **Relatórios de Produtos/serviços mais vendidos**
   - Filtros de período, ponto de venda, tipo (produto/serviço) e pela descrição
-
+- **Relatório de No-Show** (Reservas que não compareceram)
 ---
 
 ## Financeiro
@@ -182,6 +187,10 @@
     - Categorização de Pessoas
     - Definição de dias para cobrança a prazo e items a serem cobrados a prazo
     - Definição de desconto padrão para a pessoa
+  - **Crédito Pessoal**
+    - Permite gerenciar créditos pessoal recebido em fechamento de conta com crédito ou incluído manualmente no cadastro da pessoa.
+    - Carta de crédito
+    - Definição de validade do crédito pessoal
 - **Usuários**
   - Lista e Cadastro
   - Controle de acesso definido por papéis
@@ -278,6 +287,11 @@
     - Definição de Ponto de venda e produto/serviço de hospedagem
     - Tarifário padrão
     - Regime de alimentação padrão
+    - Validade padrão do Crédito Pessoal
+    - No-Show
+      - Dias de No-Show a serem cobrados
+      - Ponto de venda No-Show
+      - Produto/Serviço No-Show
   - **Financeiro**
     – Conta bancária padrão
     - Conta bancária de PIX
