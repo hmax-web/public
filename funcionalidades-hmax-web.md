@@ -6,6 +6,7 @@
   - Com Triplo estado
   - Transferência de acomodação clicando e arrastando
   - Filtros
+  - Melhor responsividade em telas menores
   - Ações rápidas (ver mais abaixo)
 - **Mapa de ocupação textual**
   - Útil para daltônicos ou quem prefere ver texto em vez de gráficos coloridos
@@ -21,6 +22,10 @@
 - **Lista de hóspedes**
   - Lista pesquisável
   - Versão para impressão com totalizadores
+- **Leitor de QR Code**
+  - Acessível pelo ícone no topo da aplicação
+  - Leitura por câmera ou código manual
+  - Localização da reserva e efetivação de check-in
 - **Filtro de Acomodações**
   - Por tipo de acomodação, status e exibição das acomodações virtuais
 - **Ficha de Entrada**
@@ -36,6 +41,7 @@
   - Possibilidade de fazer **check-in ou check-out** através desta lista
   - **Confirmação da reserva**
     - Possibilidade de enviar confirmação de reserva por email ou whatsapp mediante comando do usuário
+    - QR Code na confirmação para facilitar o check-in na recepção
     - Depende de prévia contratação e configuração
   - **Resumo/Sleep da Reserva**
 - **Nova reserva** Confirmada, Pré-Reserva ou Na Casa através da Lista de Reservas, Recepção, Mapa de Reservas ou Atalha personalizado
@@ -65,24 +71,22 @@
     - Lista de consumos da reserva com indicador de cobrança à vista ou a prazo e possibildiade de mudar o valor do indicador
     - **Lançamento de Consumos na reserva**
       - Possibilidade de lançar produtos ou serviços na reserva diferenciando preços por ponto de venda
+      - Baixa automática de estoque ao lançar consumo
     - Estorno de consumo
+      - Reposição de estoque quando o consumo havia baixado estoque
     - Transferência de consumo
   - **Pagamentos da Reserva**
     - Lista de pagamentos da reserva
     - Inclusão de pagamento nas formas Dinheiro, Cheque, Cartão, Depósito Bancário, PIX (apenas no Brasil)
-        - **Formas de pagamento** suportadas: **PIX**, **Cartão de Crédito/Débito**, **Dinheiro**, **Depósito bancário**, **Cheque** , **Cobrança A Prazo** (em botão específico para isto) e **Crédito Pessoal ou Uso de crédito**
-    - Estorno de pagamento
+      - **Formas de pagamento** suportadas: **PIX**, **Cartão de Crédito/Débito**, **Dinheiro**, **Depósito bancário**, **Cheque** e **Cobrança A Prazo** (esta última tem caminho específico)
+    - Cancelamento de pagamento
     - **Cobrança A Prazo (faturamento para pessoa autorizada)**
       - Possibilidade de definir uma pessoa para cobrança a prazo para valores de Hospedagem, Extras ou alcoólicos.
-          - Se houver Financeiro irá gerar um título a Receber, senão, deve gerar um pagamento na lista de pagamentos, com status "não pago"
+        - Se houver Financeiro irá gerar um título a Receber, senão, deve gerar um pagamento na lista de pagamentos, com status "não pago"
       - Depende ter Financeiro ativo e haver prazo definido no cadastro da pessoa
     - **Comprovante de pagamento**: Versão para impressão do comprovante de pagamento
     - Enviar **link de pagamento** (PIX/cartão): Depende de integração configurada
-    - Permitir definir se um pagamento será cobrado das despesas À Vista ou A Prazo.
   - **Log de atividades da Reserva**
-  - **No-Show**
-    - Possibilidade de definir uma reserva como No-Show (não compareceu), podendo gerar pagamento a prazo e conta a receber (se tiver financeiro), ou ainda, se houver valor a devolver para o hóspede, permite gerar crédito pessoal ou conta a pagar.
-    - O menu "No-Show" está disponível na reserva e na lista de reservas através do menu, mas só aparece a partir da data de entrada da reserva
 - **Ações Dento do Detalhe da Reserva**
   - Check-in
   - Check-out
@@ -93,7 +97,6 @@
     - Listagem de pagamentos com inclusão e cancelamento durante o fechamento de conta
     - Saldo de conta com moedas estrangeiras
       - Depende de configuração e cotação para as moedas
-    - Geração de **Crédito pessoal** em fechamentos de conta com saldo credor
   - Cadastro de **Limpeza**/Governança
   - **Interdição de acomodação**
 - **Lançamento automático de diárias**
@@ -101,6 +104,7 @@
   - Permite reservar, interditar, transferir de acomodação ou perído, estender ou encurdar estadia, podendo arrastar a reserva para um período fora dos limites exibidos devido ao auto-scroll, desde que dentro do período selecionado.
 - **Mapa de reservas por Tipo de acomodação**
   - Envio de disponbilidade para Reservas Online. Depende de ter integração
+
 ---
 
 ## Movimento de Caixa
@@ -110,7 +114,7 @@
   - Também entram nesse caixa, os pagamentos feitos em Dinheiro ou Cheque
 - **Lista de movimentos anteriores**
 - **Lista de contas fechadas**
-    - Acesso ao extrato À Vista ou A Prazo da conta fechada
+  - Acesso ao extrato À Vista ou A Prazo da conta fechada
 - **Relatório do Movimento de Caixa**
   - Visualizão e versão para impressão
   - Contém as contas fechadas e respetivos pagamentos
@@ -124,10 +128,10 @@
 - **Dashboard de Gerência**
   - Contém métricas comuns de hospedagem
 - **BOH**
-    - Filtro de período
-    - Versão para impressão
+  - Filtro de período
+  - Versão para impressão
 - **Produção de Venda**
-    - Filtro de período
+  - Filtro de período
 - **Listagem de Pagamentos**
   - Lista de pagamentos com totalizações por forma de pagamento e bandeira de cartão
   - Alterar status de pago
@@ -138,13 +142,12 @@
   - Filtros: Período, Ponto de Venda, Usuário e Tipo (Produto/Serviço)
   - Totalização por ponto de venda
 - **Estornos**
-  - Listagem de estornos de consumos e pagamentos
+  - Listagem de estornos
   - Vizualização do motivo do estorno
   - Permite arquivar estornos já esclarecidos
-  - Filtros de estornos de consumos e estornos de pagamento
 - **Relatórios de Produtos/serviços mais vendidos**
   - Filtros de período, ponto de venda, tipo (produto/serviço) e pela descrição
-- **Relatório de No-Show** (Reservas que não compareceram)
+
 ---
 
 ## Financeiro
@@ -174,6 +177,32 @@
 
 ---
 
+## Estoque
+
+- **Estoque Atual**
+  - Lista de produtos pesquisável
+  - Filtro por ponto de estoque
+  - Indicador visual de quantidade abaixo do mínimo
+- **Movimentações**
+  - Entrada de estoque
+  - Saída manual
+  - Transferência entre pontos de estoque
+  - Ajuste de saldo
+  - Movimentação pela ficha técnica do produto
+  - Entrada por unidade de entrada
+  - Atualização do último custo do produto nas entradas
+- **Cadastros**
+  - Pontos de estoque
+  - Unidades de entrada
+  - Ficha Técnica no Produto
+- **Relatórios**
+  - Posição Financeira de estoque
+  - Entrada e Saída de estoque
+  - Movimento de estoque discriminado
+  - Curva ABC
+
+---
+
 ## 8. Outros Cadastros
 
 - **Pessoas**
@@ -187,17 +216,17 @@
     - Categorização de Pessoas
     - Definição de dias para cobrança a prazo e items a serem cobrados a prazo
     - Definição de desconto padrão para a pessoa
-  - **Crédito Pessoal**
-    - Permite gerenciar créditos pessoal recebido em fechamento de conta com crédito ou incluído manualmente no cadastro da pessoa.
-    - Carta de crédito
-    - Definição de validade do crédito pessoal
 - **Usuários**
   - Lista e Cadastro
   - Controle de acesso definido por papéis
-- **Produtos e Serviços**: 
+- **Produtos e Serviços**:
   - Lista e Cadastro
+  - Opção de quantidade fracionária
+  - **Ficha técnica**
+    - Composição de produtos com custo e totalizador
 - **Pontos de venda**
   - Lista e Cadastro
+  - Vínculo opcional com ponto de estoque
 - **Múltiplos Tarifários**
   - Lista e Cadastro
   - Lista de Tarifas
@@ -225,6 +254,7 @@
   - Com este recurso é possível, por exemplo, fazer uma reserva a partir de qualquer tela do sistema
 - **Modo claro ou Escuro**
 - Login, logout, bloqueio de usuário simultâneo, recuperar/redefinir senha, confirmação de conta, cadastro.
+  - Entrada com conta Google
 - **Multi-Idioma**
 - **Perfil do usuário**
   - Redefinição de senha por parte do próprio usuário
@@ -239,7 +269,7 @@
 - **Chat HMAX**
   - Para falar com o suporte técnico ou comercial
 - **Login/Logout/Redefinição e Recuperação de senha**
-- **Wizard** 
+- **Wizard**
   - Para inicialização de dados de nova empresa
   - Inicializa tipos de acomodações e acomodações
 - **Inicialização com Dados Fictícios**
@@ -269,7 +299,7 @@
 ## Configurações
 
 - **Configurações da empresa**
-  - **Conta** 
+  - **Conta**
     – Dados da empresa
     - Logomarca para relatórios
     - Horários padrão de entrada e saída
@@ -287,11 +317,6 @@
     - Definição de Ponto de venda e produto/serviço de hospedagem
     - Tarifário padrão
     - Regime de alimentação padrão
-    - Validade padrão do Crédito Pessoal
-    - No-Show
-      - Dias de No-Show a serem cobrados
-      - Ponto de venda No-Show
-      - Produto/Serviço No-Show
   - **Financeiro**
     – Conta bancária padrão
     - Conta bancária de PIX
@@ -300,7 +325,7 @@
     - Categoria Financeira para Acréscimos
   - **Integrações**
     - Definição de email remetente para envios de email
-    - Pré ativação de integrações de Web Check-in, Fechadura eletrônica, Confirmação/cancelamento de reseva por e-mail e/ou WhatsApp, e  Link de Pagamento
+    - Pré ativação de integrações de Web Check-in, Fechadura eletrônica, Confirmação/cancelamento de reseva por e-mail e/ou WhatsApp, e Link de Pagamento
 
 ---
 
@@ -343,7 +368,7 @@
 
 ## Integrações
 
-- **Asaas** 
+- **Asaas**
   - Criação/Alteração/Cancelamento de assinaturas
   - Listagem de assinatura
   - Listagem de pagamentos de assinatura
@@ -354,8 +379,8 @@
     - Bukly
     - B2B
     - Foco Multimídia
-    - PmWeb  
-    - Motor de Reservas HMAX 
+    - PmWeb
+    - Motor de Reservas HMAX
   - Consequentemente também recebe Reservas do HMAX AI
 - **Web Check-in**
   - Email/Whatsapp de Web check-in
@@ -387,6 +412,7 @@
 - **Confirmação de reserva segura**
   - Hóspede pode receber um link seguro para visualizar a confirmação de sua reserva direto no Hmax Web, sem prencisar de um login.
   - Isto garante que só o hóspede com o respectivo contato do Whatsapp consiga visualizar e apenas por um tempo limitado após sua saída
+  - QR Code na confirmação para check-in na recepção
 - **Extrato da reserva seguro**
   - Link de extrato da reserva com os mesmos tratamentos do item anterior
 
